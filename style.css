@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+    color: #fff;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    /* background-color: black; */
+    
+}
+
+#page1 {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.222);
+    background-color: black;
+}
+
+#page1 p {
+    width: 28vw;
+    text-align: center;
+    margin-top: 15px;
+    font-family: gilroy;
+}
+
+#page1 h1 {
+    font-size: 8.5vw;
+    text-transform: uppercase;
+    line-height: 8.5vw;
+    font-weight: 700;
+}
+
+#page1 svg {
+    background-color: #0BA34E;
+    width: 6vw;
+    height: 6vw;
+    border-radius: 100%;
+}
+
+#page1-buttons {
+    text-transform: lowercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#page1-buttons h4 {
+    border: 1px solid white;
+    padding: 5px 10px;
+    border-radius: 50px;
+    font-weight: 400;
+}
+
+#page1-buttons h4:nth-last-child(2) {
+    border: none;
+    padding: 2px;
+}
+.movingdivs{
+    position: absolute;
+    bottom:4vw;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 50vw;
+ }
+.movdiv{
+    animation: mobe 10s linear 1s infinite ;
+    display: inline-block;
+ }
+ .movdiv img{
+    margin: 0 1vw;
+ }
+ .left-div{
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top:0px;
+    background:linear-gradient(to right,black,transparent);
+ }
+ .right-div{ 
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    top:0px;
+    background:linear-gradient(to right,transparent,black);
+   
+}
+ @keyframes mobe {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+    
+ }
+ 
+nav {
+
+    position: fixed;
+    /* position: relative; */
+    width: 100%;
+    /* width: 78%; */
+    /* left: 11vw; */
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-transform: uppercase;
+    background-color: black;
+    padding: 2vw 10.4vw;
+    /* margin: 0 5vw; */
+    z-index: 10;
+    cursor:pointer
+}
+
+nav button {
+    background-color: #0BA34E;
+    padding: 15px 25px;
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 2rem;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+nav h1{
+    font-size: 1.6vw;
+}
+nav .nav-part2 {
+    display: flex;
+    gap: 2vw;
+    font-size: small;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+   z-index: 10;
+    padding: 1vh 0;
+}
+
+.nav-elem h5 {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    display: none;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    
+}
+.nav-elem h5 span {
+    text-transform: capitalize;
+   transform: translateY(20px);
+   display: inline-block;
+}
+
+.nav-elem h4 {
+   margin-bottom: 4vh;
+}
+
+nav svg {
+    height: 0.8vw;
+    margin-left: 5px;
+}
+
+#nav2 {
+    width: 78%;
+    height: 0vh;
+    position: absolute;
+    top: 100%;
+    /* z-index: 10; */
+    /* bottom: 0; */
+    /* background-color: rgb(180, 31, 31); */
+    border-bottom: 1px solid white;
+    background-color: black;
+}
+
+#page2 {
+    height: 100vh;
+    width: 100%;
+    background-color: #111;
+    position: relative;
+    padding: 0vw 10.5vw;
+    padding-bottom: 8vw;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #333;
+    justify-content: space-between;
+}
+
+#page2-left {
+    height: 100%;
+    width: 40%;
+    /* background-color: #333; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 3vw 0;
+}
+
+#page2-left p {
+    font-size: 0.8vw;
+}
+
+#page2-left h5 {
+    width: 75%;
+    font-weight: 400;
+    font-size: 1.1vw;
+}
+
+
+#page2-right {
+    height: 100%;
+    width: 50%;
+    /* background-color: #333; */
+    cursor: pointer;
+}
+
+.right-elem {
+    position: relative;
+    /* background-color: red; */
+    padding-top: 2vw;
+    padding-bottom: 5vw;
+    border-bottom: 1px solid #333;
+}
+
+.right-elem h2 {
+    font-size: 1.4vw;
+    font-weight: 400;
+}
+
+.right-elem img {
+    height: 7vw;
+    width: 7vw;
+    border-radius: 50%;
+    object-fit: cover;
+    opacity: 0;
+    position: absolute;
+    scale: 0;
+}
+
+#page3 {
+    height: 100vh;
+    width: 100%;
+    background-image: url(https://lazarev.kiev.ua/la24/reel-cover.webp);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position:relative
+}
+
+#page3 .page-center{
+   background-color: white;
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   border-radius: 50%;
+   cursor: pointer;
+}
+
+#page3 .showreel{
+    opacity:0;
+    width: 11vw;
+    text-align: center;
+    background-color: white;
+    padding:  1.5vh 2vh 1.3vh 2vh;
+    font-size: 0.9rem;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 6vh ;
+    position:absolute;
+    top:105%;
+    transition:all 0.3s ease ;
+    transform: translateY(10%);
+}
+#page3 .page-center:hover .showreel{
+    opacity: 1;
+    transform: translateY(0%);
+}
+#page3 i{
+    width: 10vw;
+    height: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.6vw;
+    color:black
+} 
+#page3 video{
+    width: 100%;
+    height:100%;
+    position: absolute;
+    object-fit: cover;
+    transform:  scaleX(0.7) scaleY(0);
+    opacity: 0;
+    z-index: 999;
+}
+#page4{
+     padding: 6vw 10vw;
+     width: 100%;
+     min-height: 100vh;
+     background-color: white;
+     display: flex;
+     flex-direction: column;
+     gap: 6vw;
+}
+#page4 .section{
+    height: 60vh;
+   display: flex;
+   justify-content: space-between;
+}
+#page4 .section-1{
+   
+    width: 25%;
+    height: 100%;
+    border-top: 2px solid black;
+}
+#page4 .section-1 h2{
+    color: black;
+    font-weight: 400;
+    font-size: 2rem;
+    padding-top: 3vh;
+    margin-bottom: 8vh;
+}
+#page4 .section-1 p{
+    color: black;
+    font-size: 1.2rem;
+}
+#page4 .section-2{
+    background-color: aquamarine;
+    width: 70%;
+    height: 100%;
+    position: relative;
+}
+#page4 .section-2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    
+}
+#page4 .section-2 video{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    object-fit: cover;
+    opacity: 0;
+    cursor: pointer;
+    
+}
